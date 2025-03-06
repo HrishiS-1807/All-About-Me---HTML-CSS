@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All About Me</title>
+</head>
+<body>
+<div class="card">
+  <div class="title">&#128525; All About Me! &#128525;</div>
+  <div>
+	<a href="index.html" class="link">Intro</a>
+	<a href="page2.html" class="link">About Me</a>
+	<a href="page3.html" class="link">Google</a>
+		<button type="button" onclick="displayDateTime()">
+Click me to display Date and Time!
+</button>
+
+<p id="demo"></p>
+
+<script>
+  function displayDateTime() {
+	var displayElement = document.getElementById('demo');
+
+
+	function updateDateTime() {
+  	var now = new Date();
+  	var dateTimeString = now.toLocaleString();
+  	displayElement.textContent = dateTimeString;
+	}
+
+
+	updateDateTime();
+	setInterval(updateDateTime, 1000);
+  }
+</script>
+  </div>
+</div>
+
+</body>
+</html>
